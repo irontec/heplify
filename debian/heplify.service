@@ -1,0 +1,14 @@
+[Unit]
+Description=heplify HEP agent
+After=network.target
+After=multi-user.target
+
+[Service]
+User=root
+EnvironmentFile=/etc/default/heplify
+ExecStart=/usr/bin/heplify -hs $HEP_SERVER -hn $HEP_CAPTURE_ID
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,16 @@
+Source: heplify
+Section: comm
+Priority: optional
+Build-Depends: debhelper (>=9.2), golang (>=1.19), libpcap-dev, libc6-dev, libdbus-1-dev, libsystemd-dev
+Standards-Version: 3.9.6
+Maintainer: Irontec Comms Team <comms@irontec.com>
+
+Package: heplify
+Architecture: all
+Section: comm
+Priority: optional
+Depends: debconf
+Homepage: https://github.com/sipcapture/heplify
+Description: Portable and Lightweight HEP Capture Agent
+ .
+

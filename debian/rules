@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+CGO_ENABLED=1
+GOOS=linux
+
+override_dh_auto_build:
+	go build -a -buildvcs=false -o heplify .
+
+override_dh_systemd_enable:
+	dh_systemd_enable heplify.service
+
+override_dh_systemd_start:
+	dh_systemd_start heplify.service
+
+override_dh_auto_test:
+
+%:
+	dh $@ --with systemd

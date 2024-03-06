@@ -1,3 +1,4 @@
 heplify
 heplify.log*
 vendor/
+.idea
